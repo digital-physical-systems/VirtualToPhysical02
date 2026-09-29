@@ -574,10 +574,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SendToArduinoScript
   portName: /dev/cu.usbmodem21201
+  autoSelectPort: 1
   baudRate: 115200
+  sendIntervalMs: 50
+  reconnectIntervalSeconds: 2
+  readyTimeoutSeconds: 3
+  requireReadyHandshake: 1
+  verboseLogging: 1
   dataSource: {fileID: 642637713}
   lightSource: {fileID: 1978334144}
-  sendInterval: 40
+  xMin: -10
+  xMax: 10
 --- !u!4 &914003980
 Transform:
   m_ObjectHideFlags: 0
