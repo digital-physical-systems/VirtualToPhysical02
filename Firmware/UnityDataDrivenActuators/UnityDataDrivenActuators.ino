@@ -1,27 +1,26 @@
 #include <Servo.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 // Unity Data Driven Actuators
-// Receives newline-terminated CSV from Unity: x,y,z,light
+// Receives newline-terminated command from Unity: CTRL,<servoAngle>,<lightState>
+// Example: CTRL,120,1
+// Also accepts compatibility formats: <servoAngle>,<lightState> and x,y,z,light
 
 const int SERVO_PIN = 9;
 const int LED_PIN = 8;
+const bool RUN_STARTUP_SELF_TEST = true;
 
-const int SERIAL_BUFFER_SIZE = 96;
+const int SERIAL_BUFFER_SIZE = 32;
 char serialBuffer[SERIAL_BUFFER_SIZE];
 int serialBufferIndex = 0;
 
-// Tune these to the expected Unity x range in your scene.
-const float UNITY_X_MIN = -10.0f;
-const float UNITY_X_MAX = 10.0f;
-
-float posX = 0.0f;
-float posY = 0.0f;
-float posZ = 0.0f;
+int servoAngle = 90;
 int lightState = 0;
 
 Servo myServo;
+
+const float UNITY_X_MIN = -10.0f;
+const float UNITY_X_MAX = 10.0f;
 
 int mapUnityXToServo(float xValue) {
   if (UNITY_X_MAX <= UNITY_X_MIN) {
@@ -29,48 +28,57 @@ int mapUnityXToServo(float xValue) {
   }
 
   float normalized = (xValue - UNITY_X_MIN) / (UNITY_X_MAX - UNITY_X_MIN);
-  int servoAngle = (int)(normalized * 180.0f);
-  return constrain(servoAngle, 0, 180);
+  int mapped = (int)(normalized * 180.0f);
+  return constrain(mapped, 0, 180);
 }
 
-bool parseUnityCsvLine(const char* line, float& x, float& y, float& z, int& light) {
-  char buffer[SERIAL_BUFFER_SIZE];
-  strncpy(buffer, line, sizeof(buffer) - 1);
-  buffer[sizeof(buffer) - 1] = '\0';
+bool parseControlCommand(const char* line, int& nextServoAngle, int& nextLightState) {
+  int parsedServo = 0;
+  int parsedLight = 0;
+  float parsedX = 0.0f;
+  float parsedY = 0.0f;
+  float parsedZ = 0.0f;
 
-  char* token = strtok(buffer, ",");
-  if (token == NULL) return false;
-  x = atof(token);
+  if (sscanf(line, "CTRL,%d,%d", &parsedServo, &parsedLight) == 2) {
+    nextServoAngle = constrain(parsedServo, 0, 180);
+    nextLightState = (parsedLight != 0) ? 1 : 0;
+    return true;
+  }
 
-  token = strtok(NULL, ",");
-  if (token == NULL) return false;
-  y = atof(token);
+  if (sscanf(line, "%d,%d", &parsedServo, &parsedLight) == 2) {
+    nextServoAngle = constrain(parsedServo, 0, 180);
+    nextLightState = (parsedLight != 0) ? 1 : 0;
+    return true;
+  }
 
-  token = strtok(NULL, ",");
-  if (token == NULL) return false;
-  z = atof(token);
+  if (sscanf(line, "%f,%f,%f,%d", &parsedX, &parsedY, &parsedZ, &parsedLight) == 4) {
+    nextServoAngle = mapUnityXToServo(parsedX);
+    nextLightState = (parsedLight != 0) ? 1 : 0;
+    return true;
+  }
 
-  token = strtok(NULL, ",");
-  if (token == NULL) return false;
-  light = atoi(token);
-
-  return true;
+  return false;
 }
 
 void handleIncomingUnityData(const char* line) {
-  float x = 0.0f;
-  float y = 0.0f;
-  float z = 0.0f;
-  int light = 0;
-
-  if (!parseUnityCsvLine(line, x, y, z, light)) {
+  if (strcmp(line, "PING") == 0) {
+    Serial.println("READY");
     return;
   }
 
-  posX = x;
-  posY = y;
-  posZ = z;
-  lightState = (light != 0) ? 1 : 0;
+  int nextServoAngle = 90;
+  int nextLightState = 0;
+
+  if (!parseControlCommand(line, nextServoAngle, nextLightState)) {
+    return;
+  }
+
+  servoAngle = nextServoAngle;
+  lightState = nextLightState;
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.println("OK");
+  delay(5);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void processIncomingSerial() {
@@ -99,25 +107,31 @@ void processIncomingSerial() {
 }
 
 void updateActuators() {
-  int servoAngle = mapUnityXToServo(posX);
   myServo.write(servoAngle);
   digitalWrite(LED_PIN, lightState ? HIGH : LOW);
 }
 
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
   pinMode(LED_PIN, OUTPUT);
   myServo.attach(SERVO_PIN);
 
   Serial.begin(115200);
-  Serial.setTimeout(25);
-  delay(1000);
+  delay(1200);
+  Serial.println("READY");
 
-  // Startup test sequence.
-  digitalWrite(LED_PIN, HIGH);
-  myServo.write(0);
-  delay(500);
+  if (RUN_STARTUP_SELF_TEST) {
+    digitalWrite(LED_PIN, HIGH);
+    myServo.write(0);
+    delay(1000);
+    myServo.write(180);
+    delay(1000);
+    myServo.write(90);
+    digitalWrite(LED_PIN, LOW);
+  }
+
+  myServo.write(servoAngle);
   digitalWrite(LED_PIN, LOW);
-  myServo.write(90);
 }
 
 void loop() {
