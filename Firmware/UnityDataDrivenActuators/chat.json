@@ -1,0 +1,3567 @@
+{
+  "responderUsername": "GitHub Copilot",
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_febeff5b-81f3-4bb3-8212-d4fc8dca6e66",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 118
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 3,
+              "endColumn": 42
+            },
+            "text": "If I wanted to add a max value for this, what would the syntax be for that?\n\n[Min(10)] public int sendIntervalMs = 50;",
+            "kind": "text"
+          }
+        ],
+        "text": "If I wanted to add a max value for this, what would the syntax be for that?\n\n[Min(10)] public int sendIntervalMs = 50;"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 13,
+                "startColumn": 5,
+                "endLineNumber": 13,
+                "endColumn": 46,
+                "selectionStartLineNumber": 13,
+                "selectionStartColumn": 46,
+                "positionLineNumber": 13,
+                "positionColumn": 5
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Clarifying Unity max value attribute**",
+          "id": "84c7283c-84dc-4084-8657-4855509f3b66",
+          "reasoningDurationMs": 15,
+          "generatedTitle": "Clarifying Unity max value attribute"
+        },
+        {
+          "value": "In Unity, the usual way is to replace `Min` with `Range`:\n\n```csharp\n[Range(10, 1000)] public int sendIntervalMs = 50;\n```\n\nThat gives you both a min and max in the Inspector.\n\nTwo quick notes:\n\n- `Range` shows a slider (for `int`/`float`) in the Inspector.\n- If you also want to enforce clamping in code (not just Inspector editing), add an `OnValidate()` clamp too.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792024577090,
+      "modelId": "agent-host-copilotcli:gpt-5.3-codex",
+      "modelConfiguration": {
+        "thinkingLevel": "medium"
+      },
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_fd04fc4d-0190-45ed-9ea1-7730929bda5b",
+      "result": {
+        "timings": {
+          "firstProgress": 6092,
+          "totalElapsed": 7456
+        },
+        "details": "GPT-5.3-Codex • 5.6 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-7d16a8d5-51ef-4016-97f3-d3acaa838934"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792024584604
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792024577090,
+      "timeSpentWaiting": 0,
+      "promptTokens": 29209,
+      "completionTokens": 341,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 23
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 76
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 1
+        }
+      ],
+      "copilotCredits": 5.588975,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 29209,
+          "cachedTokens": 0,
+          "outputTokens": 341
+        }
+      ],
+      "sessionCopilotCredits": 5.588975,
+      "elapsedMs": 7514
+    },
+    {
+      "requestId": "request_a2f5621d-a45b-41ee-bb58-cc7c300dc8c7",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 16
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 17
+            },
+            "text": "Explain line 37 ",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain line 37 "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 37,
+                "startColumn": 9,
+                "endLineNumber": 37,
+                "endColumn": 34,
+                "selectionStartLineNumber": 37,
+                "selectionStartColumn": 34,
+                "positionLineNumber": 37,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Explaining Unity Time scheduling**",
+          "id": "b41d0a92-2e5f-472f-83d8-8bd73d4c76fa",
+          "reasoningDurationMs": 14,
+          "generatedTitle": "Explaining Unity Time scheduling"
+        },
+        {
+          "value": "Line 37:\n\n```csharp\nnextSendTime = Time.time;\n```\n\nsets `nextSendTime` to the **current game time** (in seconds since the scene/game started).\n\nSo practically, it means: “the next allowed send time is now.”  \nIf your later logic is something like `if (Time.time >= nextSendTime)`, this makes the send eligible immediately (usually this frame or next frame).\n\nReference: [SendToArduinoScript.cs:37](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:37)",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792024828619,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_e2640163-8792-4ea8-b85f-19a0e5c906b9",
+      "result": {
+        "timings": {
+          "firstProgress": 2668,
+          "totalElapsed": 3830
+        },
+        "details": "GPT-5.3-Codex • 1.1 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-4b5fa1cb-234e-45d1-abaf-5e5b843916ad"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792024832490
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792024828619,
+      "timeSpentWaiting": 0,
+      "promptTokens": 29409,
+      "completionTokens": 280,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 23
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 75
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 2
+        }
+      ],
+      "copilotCredits": 1.103375,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 29409,
+          "cachedTokens": 28160,
+          "outputTokens": 280
+        }
+      ],
+      "sessionCopilotCredits": 6.69235,
+      "elapsedMs": 3871
+    },
+    {
+      "requestId": "request_1b4df5e0-3566-4eb7-a77a-f1b0d6a98647",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 51
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 52
+            },
+            "text": "How is \"nextSendTime\" used in this code in general?",
+            "kind": "text"
+          }
+        ],
+        "text": "How is \"nextSendTime\" used in this code in general?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 37,
+                "startColumn": 9,
+                "endLineNumber": 37,
+                "endColumn": 34,
+                "selectionStartLineNumber": 37,
+                "selectionStartColumn": 34,
+                "positionLineNumber": 37,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "I’ll quickly inspect the script so I can explain exactly how `nextSendTime` is used end-to-end.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\"\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "using System;\nusing System.IO.Ports;\nusing UnityEngine;\n\n// Beginner-friendly Unity -> Arduino sender.\n// Protocol (one newline-terminated command): CTRL,<servoAngle 0-180>,<lightState 0|1>\npublic class SendToArduinoScript : MonoBehaviour\n{\n    [Header(\"Serial Connection\")]\n    public string portName = \"COM3\";\n    public bool autoSelectPort = true;\n    public int baudRate = 115200;\n    [Min(10)] public int sendIntervalMs = 50;\n    [Min(0.25f)] public float reconnectIntervalSeconds = 2f;\n    [Min(0.25f)] public float readyTimeoutSeconds = 3f;\n    public bool requireReadyHandshake = true;\n    public bool verboseLogging = false;\n\n    [Header(\"Unity Data Sources\")]\n    public Transform dataSource;\n    public Light lightSource;\n\n    [Header(\"Map X Position To Servo Angle\")]\n    public float xMin = -10f;\n    public float xMax = 10f;\n\n    private SerialPort serialPort;\n    private float nextSendTime;\n    private float nextReconnectTime;\n    private float readyDeadline;\n    private bool hasWarnedMissingReferences;\n    private bool hasWarnedWaitingForReady;\n    private bool arduinoReady;\n\n    void Start()\n    {\n        nextSendTime = Time.time;\n        TryOpenPort();\n    }\n\n    void Update()\n    {\n        if (!IsPortOpen())\n        {\n            TryReconnectIfNeeded();\n            return;\n        }\n\n        ReadIncomingSerialMessages();\n\n        if (requireReadyHandshake && !arduinoReady)\n        {\n            if (!hasWarnedWaitingForReady)\n            {\n                Debug.LogWarning(\"Waiting for Arduino READY handshake on \" + portName + \".\");\n                hasWarnedWaitingForReady = true;\n            }\n\n            if (Time.time >= readyDeadline)\n            {\n                Debug.LogWarning(\"READY handshake timed out. Reconnecting...\");\n                nextReconnectTime = Time.time + reconnectIntervalSeconds;\n                ClosePort();\n            }\n\n            return;\n        }\n\n        float intervalSeconds = Mathf.Max(0.01f, sendIntervalMs / 1000f);\n        if (Time.time < nextSendTime)\n        {\n            return;\n        }\n\n        SendControlPacket();\n\n        // Keep cadence steady even if a frame is delayed.\n        while (nextSendTime <= Time.time)\n        {\n            nextSendTime += intervalSeconds;\n        }\n    }\n\n    void OnDisable()\n    {\n        ClosePort();\n    }\n\n    void OnApplicationQuit()\n    {\n        ClosePort();\n    }\n\n    private bool IsPortOpen()\n    {\n        return serialPort != null && serialPort.IsOpen;\n    }\n\n    private void TryReconnectIfNeeded()\n    {\n        if (Time.time < nextReconnectTime)\n        {\n            return;\n        }\n\n        TryOpenPort();\n    }\n\n    private void TryOpenPort()\n    {\n        ClosePort();\n\n        string selectedPort = ResolvePortName();\n        if (string.IsNullOrEmpty(selectedPort))\n        {\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            Debug.LogWarning(\"No serial ports detected. Reconnect will be retried.\");\n            return;\n        }\n\n        try\n        {\n            serialPort = new SerialPort(selectedPort, baudRate)\n            {\n                NewLine = \"\\n\",\n                WriteTimeout = 100,\n                ReadTimeout = 100,\n                DtrEnable = true,\n                RtsEnable = true\n            };\n\n            serialPort.Open();\n            serialPort.DiscardInBuffer();\n            serialPort.DiscardOutBuffer();\n\n            arduinoReady = false;\n            hasWarnedWaitingForReady = false;\n            readyDeadline = Time.time + readyTimeoutSeconds;\n            serialPort.WriteLine(\"PING\");\n\n            portName = selectedPort;\n            Debug.Log(\"Serial connected on \" + selectedPort + \" @ \" + baudRate + \" baud.\");\n        }\n        catch (Exception e)\n        {\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            Debug.LogWarning(\"Serial open failed: \" + e.Message);\n            Debug.LogWarning(\"Available ports: \" + string.Join(\", \", SerialPort.GetPortNames()));\n            ClosePort();\n        }\n    }\n\n    private void ReadIncomingSerialMessages()\n    {\n        if (!IsPortOpen())\n        {\n            return;\n        }\n\n        try\n        {\n            while (serialPort.BytesToRead > 0)\n            {\n                string line = serialPort.ReadLine();\n                if (string.IsNullOrWhiteSpace(line))\n                {\n                    continue;\n                }\n\n                string trimmed = line.Trim();\n                if (trimmed.Equals(\"READY\", StringComparison.OrdinalIgnoreCase))\n                {\n                    arduinoReady = true;\n                    Debug.Log(\"Arduino handshake received (READY).\");\n                }\n                else if (verboseLogging)\n                {\n                    Debug.Log(\"Arduino: \" + trimmed);\n                }\n            }\n        }\n        catch (TimeoutException)\n        {\n            // No complete line available yet.\n        }\n        catch (Exception e)\n        {\n            Debug.LogWarning(\"Serial read failed: \" + e.Message + \". Reconnecting...\");\n            arduinoReady = false;\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            ClosePort();\n        }\n    }\n\n    private string ResolvePortName()\n    {\n        if (!autoSelectPort)\n        {\n            return portName;\n        }\n\n        string[] ports = SerialPort.GetPortNames();\n        if (ports.Length == 0)\n        {\n            return string.Empty;\n        }\n\n        Array.Sort(ports, StringComparer.OrdinalIgnoreCase);\n\n        foreach (string candidate in ports)\n        {\n            string lower = candidate.ToLowerInvariant();\n            if (lower.Contains(\"usb\") || lower.Contains(\"acm\") || lower.Contains(\"modem\") || lower.Contains(\"serial\"))\n            {\n                return candidate;\n            }\n        }\n\n        return ports[0];\n    }\n\n    private void SendControlPacket()\n    {\n        if (dataSource == null || lightSource == null)\n        {\n            if (!hasWarnedMissingReferences)\n            {\n                Debug.LogWarning(\"Assign both dataSource and lightSource in the Inspector.\");\n                hasWarnedMissingReferences = true;\n            }\n\n            return;\n        }\n\n        hasWarnedMissingReferences = false;\n\n        int servoAngle = MapXToServoAngle(dataSource.position.x);\n        int lightState = lightSource.enabled ? 1 : 0;\n        string command = \"CTRL,\" + servoAngle + \",\" + lightState;\n\n        try\n        {\n            serialPort.WriteLine(command);\n\n            if (verboseLogging)\n            {\n                Debug.Log(\"Sent: \" + command);\n            }\n        }\n        catch (Exception e)\n        {\n            Debug.LogWarning(\"Serial write failed: \" + e.Message + \". Reconnecting...\");\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            ClosePort();\n        }\n    }\n\n    private int MapXToServoAngle(float xValue)\n    {\n        if (Mathf.Approximately(xMin, xMax))\n        {\n            return 90;\n        }\n\n        float normalized = Mathf.InverseLerp(xMin, xMax, xValue);\n        return Mathf.RoundToInt(Mathf.Lerp(0f, 180f, normalized));\n    }\n\n    private void ClosePort()\n    {\n        arduinoReady = false;\n\n        if (serialPort == null)\n        {\n            return;\n        }\n\n        try\n        {\n            if (serialPort.IsOpen)\n            {\n                serialPort.Close();\n            }\n        }\n        catch\n        {\n            // Ignore cleanup failures during shutdown/reconnect.\n        }\n\n        serialPort.Dispose();\n        serialPort = null;\n    }\n}\n",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_vUMGss3zrhQYTBVrqAWAoMSz",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Summarizing usage steps**",
+          "id": "f410d46b-e81f-45b8-a27e-abdb711ec42b",
+          "reasoningDurationMs": 10,
+          "generatedTitle": "Summarizing usage steps"
+        },
+        {
+          "value": "Great question. In this script, `nextSendTime` is the **send-rate scheduler**.\n\n### How it’s used overall\n\n- It’s declared as a private timer field: [nextSendTime](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:26)\n- It’s initialized in `Start()` to “now”: [Start](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:33)\n- In `Update()`, the script computes the desired interval from `sendIntervalMs`, then checks:\n  - if `Time.time < nextSendTime`, it **does not send yet** ([Update](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:67))\n  - once `Time.time >= nextSendTime`, it sends one packet ([SendControlPacket](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:72))\n- After sending, it advances `nextSendTime` in a loop by `intervalSeconds` until it’s in the future ([while loop](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:75)).\n\n### Why this is useful\n\nIt keeps sending at a steady cadence (e.g., every 50 ms) **independent of frame rate**.  \nIf one frame is late, the `while` loop catches the schedule up so timing stays stable rather than drifting.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792024951426,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_73182ada-137b-4aa5-a521-478397693f40",
+      "result": {
+        "timings": {
+          "firstProgress": 1591,
+          "totalElapsed": 6444
+        },
+        "details": "GPT-5.3-Codex • 2.3 credits"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792024957918
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792024951426,
+      "timeSpentWaiting": 0,
+      "promptTokens": 31373,
+      "completionTokens": 596,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 22
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 4
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 71
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 3
+        }
+      ],
+      "copilotCredits": 2.32204,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 61032,
+          "cachedTokens": 58368,
+          "outputTokens": 596
+        }
+      ],
+      "sessionCopilotCredits": 9.01439,
+      "elapsedMs": 6492
+    },
+    {
+      "requestId": "request_88a4d5ee-3dc1-4d15-898e-c4c09bc6f857",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 79
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 80
+            },
+            "text": "Explain line 51. I'm confused about why \"arduinoReady\" has the !(not) operator.",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain line 51. I'm confused about why \"arduinoReady\" has the !(not) operator."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Inspecting code near target line**",
+          "id": "0a30a264-0aa3-4bb3-aa0b-42c7e974a350",
+          "reasoningDurationMs": 14,
+          "generatedTitle": "Inspecting code near target line"
+        },
+        {
+          "value": "I’ll grab the exact surrounding lines so I can explain line 51 precisely.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 46 to 58",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    46,\n    58\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "            return;\n        }\n\n        ReadIncomingSerialMessages();\n\n        if (requireReadyHandshake && !arduinoReady)\n        {\n            if (!hasWarnedWaitingForReady)\n            {\n                Debug.LogWarning(\"Waiting for Arduino READY handshake on \" + portName + \".\");\n                hasWarnedWaitingForReady = true;\n            }\n",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_pd6TB4YKSm1d3k88Ib70XSDd",
+          "toolId": "view"
+        },
+        {
+          "value": "Totally fair confusion — this line is a boolean gate:\n\n```csharp\nif (requireReadyHandshake && !arduinoReady)\n```\n\nAt [SendToArduinoScript.cs:51](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:51), it means:\n\n- `requireReadyHandshake` = “Do we care about handshake?”\n- `!arduinoReady` = “Arduino is **not** ready yet”\n\nSo the block runs only when both are true:\n1. Handshake is required, **and**\n2. READY has not been received yet.\n\n### Why the `!` is needed\n`arduinoReady` becomes `true` after receiving `\"READY\"`.  \nUntil then, it’s `false`.  \nUsing `!arduinoReady` checks that “not ready” state, so the script waits/logs/timeout-handles instead of sending control packets too early.\n\nIf it were just `arduinoReady` (without `!`), it would do this waiting logic only after the Arduino is ready — the opposite of what you want.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792025201356,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_cfabb9a6-3447-47f9-b6bf-f74291e8b6f0",
+      "result": {
+        "timings": {
+          "firstProgress": 2322,
+          "totalElapsed": 6346
+        },
+        "details": "GPT-5.3-Codex • 2.5 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-fd4d95ca-ecfd-43e2-91ad-52d0128c65df"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792025207759
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792025201356,
+      "timeSpentWaiting": 0,
+      "promptTokens": 32154,
+      "completionTokens": 496,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 21
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 69
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 9
+        }
+      ],
+      "copilotCredits": 2.543135,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 64017,
+          "cachedTokens": 59392,
+          "outputTokens": 496
+        }
+      ],
+      "sessionCopilotCredits": 11.557525,
+      "elapsedMs": 6403
+    },
+    {
+      "requestId": "request_82c2305c-7a19-4c84-b400-d12c8587861d",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 84
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 85
+            },
+            "text": "Where is the value for \"readyDeadline\" assigned (before the conditional in line 59)?",
+            "kind": "text"
+          }
+        ],
+        "text": "Where is the value for \"readyDeadline\" assigned (before the conditional in line 59)?"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Planning exact line inspection**",
+          "id": "fa61d08d-84b7-405d-abcb-0338f137acde",
+          "reasoningDurationMs": 14,
+          "generatedTitle": "Planning exact line inspection"
+        },
+        {
+          "value": "I’ll locate every assignment to `readyDeadline` so we can trace exactly where it’s set before that check.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Search for `readyDeadline\\s*=`",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "search"
+          },
+          "toolCallId": "call_IO5HXBCSqLA4hLCJxPpvqePN",
+          "toolId": "rg"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Clarifying port open timing logic**",
+          "id": "c7f6e02c-da84-4d9a-9860-ea5610dfd2e0",
+          "reasoningDurationMs": 12,
+          "generatedTitle": "Clarifying port open timing logic"
+        },
+        {
+          "value": "It’s assigned in `TryOpenPort()` here:\n\n- [SendToArduinoScript.cs:138](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:138)\n\n```csharp\nreadyDeadline = Time.time + readyTimeoutSeconds;\n```\n\nSo before the timeout check on line 59, the flow is:\n\n1. `Start()` calls `TryOpenPort()` ([SendToArduinoScript.cs:34](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:34))\n2. After opening the port, `TryOpenPort()` sets `readyDeadline` to “now + timeout”.\n3. `Update()` later checks whether `Time.time >= readyDeadline` while waiting for READY.\n\nIt also gets reset again each time a reconnect successfully opens the port (same line in `TryOpenPort()`).",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792025539077,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_085f3a14-546a-437e-9659-fd3d35ec3299",
+      "result": {
+        "timings": {
+          "firstProgress": 2324,
+          "totalElapsed": 6838
+        },
+        "details": "GPT-5.3-Codex • 2 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-73f987f0-0577-4167-aec4-c65b1df8bcdf"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792025545968
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792025539078,
+      "timeSpentWaiting": 0,
+      "promptTokens": 32590,
+      "completionTokens": 449,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 21
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 68
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 11
+        }
+      ],
+      "copilotCredits": 2.00039,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 64978,
+          "cachedTokens": 63488,
+          "outputTokens": 449
+        }
+      ],
+      "sessionCopilotCredits": 13.557915,
+      "elapsedMs": 6890
+    },
+    {
+      "requestId": "request_a9192968-05cb-4b39-b243-5b298c5bf411",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 23
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 24
+            },
+            "text": "Explain lines 69 and 70",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain lines 69 and 70"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 69,
+                "startColumn": 9,
+                "endLineNumber": 70,
+                "endColumn": 38,
+                "selectionStartLineNumber": 70,
+                "selectionStartColumn": 38,
+                "positionLineNumber": 69,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Clarifying float division and timing logic**",
+          "id": "7424aa0e-4f77-4695-a58a-96932a28652d",
+          "reasoningDurationMs": 10,
+          "generatedTitle": "Clarifying float division and timing logic"
+        },
+        {
+          "value": "Sure — these two lines work together to control **send timing**.\n\nAt [SendToArduinoScript.cs:69](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:69):\n\n```csharp\nfloat intervalSeconds = Mathf.Max(0.01f, sendIntervalMs / 1000f);\n```\n\n- Converts `sendIntervalMs` (milliseconds) to seconds.\n  - Example: `50 ms` → `0.05 s`\n- `Mathf.Max(0.01f, ...)` enforces a minimum interval of 0.01s (10 ms), so it can’t become zero or extremely tiny.\n\nAt [SendToArduinoScript.cs:70](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:70):\n\n```csharp\nif (Time.time < nextSendTime)\n```\n\n- Checks whether it’s **too early** to send again.\n- If current game time is still before the scheduled `nextSendTime`, the method returns and skips sending this frame.\n\nSo in plain terms: line 69 decides *how often* sends are allowed, and line 70 enforces that schedule.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792025849764,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_65d0a059-6646-4b34-a369-451ec06b2cf5",
+      "result": {
+        "timings": {
+          "firstProgress": 2390,
+          "totalElapsed": 4629
+        },
+        "details": "GPT-5.3-Codex • 1.2 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-5122c376-6366-4534-8418-e6c0e33d6e9c"
+        },
+        {
+          "suggestionId": "sgt-fb604589-2743-48c6-8d66-2e2f68ce0f34"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792025854437
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792025849764,
+      "timeSpentWaiting": 0,
+      "promptTokens": 32917,
+      "completionTokens": 359,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 21
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 67
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 12
+        }
+      ],
+      "copilotCredits": 1.182755,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 32917,
+          "cachedTokens": 32256,
+          "outputTokens": 359
+        }
+      ],
+      "sessionCopilotCredits": 14.74067,
+      "elapsedMs": 4673
+    },
+    {
+      "requestId": "request_e98fbfb6-0dd9-4604-8dda-87961c0d1f14",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 141
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 142
+            },
+            "text": "Why is the timing managed in seconds rather than in milliseconds? This conversion just seems like an added complexity. Don't change anything.",
+            "kind": "text"
+          }
+        ],
+        "text": "Why is the timing managed in seconds rather than in milliseconds? This conversion just seems like an added complexity. Don't change anything."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 69,
+                "startColumn": 9,
+                "endLineNumber": 70,
+                "endColumn": 38,
+                "selectionStartLineNumber": 70,
+                "selectionStartColumn": 38,
+                "positionLineNumber": 69,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Explaining Unity Time usage and precision**",
+          "id": "ca91a90b-4c52-4ab3-b97e-889c8d8ddbc8",
+          "reasoningDurationMs": 14,
+          "generatedTitle": "Explaining Unity Time usage and precision"
+        },
+        {
+          "value": "Great question — your instinct is reasonable.\n\nThe main reason is: Unity’s built-in clock values (`Time.time`, `Time.deltaTime`) are already in **seconds**.  \nSo in [SendToArduinoScript.cs:69-70](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:69), the code converts once so everything compares in the same unit as `Time.time`.\n\nWhy that’s typically preferred:\n\n- **Consistency with Unity API**: no repeated `* 1000` / `/ 1000` everywhere.\n- **Fewer unit-mismatch bugs**: comparing milliseconds directly to `Time.time` (seconds) is an easy mistake.\n- **Readability for time math in Unity**: most Unity timing code is “seconds-based.”\n\nSo yes, there is a conversion step, but it usually *reduces* complexity overall because all runtime timing stays in the engine’s native unit. The script still exposes `sendIntervalMs` in ms because that can feel more intuitive in the Inspector for short intervals like 50 ms.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792025941440,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_7d7c0df6-a0bd-4bcf-bd40-02e518c0eedd",
+      "result": {
+        "timings": {
+          "firstProgress": 2135,
+          "totalElapsed": 4287
+        },
+        "details": "GPT-5.3-Codex • 1.2 credits"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792025945782
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792025941440,
+      "timeSpentWaiting": 0,
+      "promptTokens": 33356,
+      "completionTokens": 349,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 20
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 66
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 13
+        }
+      ],
+      "copilotCredits": 1.24558,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 33356,
+          "cachedTokens": 32256,
+          "outputTokens": 349
+        }
+      ],
+      "sessionCopilotCredits": 15.98625,
+      "elapsedMs": 4342
+    },
+    {
+      "requestId": "request_b6c5d7ec-3ff0-4a5a-8c98-087d8d89aabe",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 84
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 85
+            },
+            "text": "Explain line 239. I'm specifically interested in how the CTRL component is utilized.",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain line 239. I'm specifically interested in how the CTRL component is utilized."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Verifying protocol usage references**",
+          "id": "a7767905-f9af-4930-9573-c367f090bad5",
+          "reasoningDurationMs": 108,
+          "generatedTitle": "Verifying protocol usage references"
+        },
+        {
+          "value": "I’ll quickly check where `CTRL` appears across the project so I can explain exactly how it’s used end-to-end.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Search for `CTRL`",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "search"
+          },
+          "toolCallId": "call_W2HinzyypzAkbzcxon6XFaHo",
+          "toolId": "rg"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Reviewing view usage near line 42**",
+          "id": "77306035-c0d5-4c6e-8a13-5d0fe10ff037",
+          "reasoningDurationMs": 12,
+          "generatedTitle": "Reviewing view usage near line 42"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino), lines 34 to 56",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino\",\n  \"view_range\": [\n    34,\n    56\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "\nbool parseControlCommand(const char* line, int& nextServoAngle, int& nextLightState) {\n  int parsedServo = 0;\n  int parsedLight = 0;\n  float parsedX = 0.0f;\n  float parsedY = 0.0f;\n  float parsedZ = 0.0f;\n\n  if (sscanf(line, \"CTRL,%d,%d\", &parsedServo, &parsedLight) == 2) {\n    nextServoAngle = constrain(parsedServo, 0, 180);\n    nextLightState = (parsedLight != 0) ? 1 : 0;\n    return true;\n  }\n\n  if (sscanf(line, \"%d,%d\", &parsedServo, &parsedLight) == 2) {\n    nextServoAngle = constrain(parsedServo, 0, 180);\n    nextLightState = (parsedLight != 0) ? 1 : 0;\n    return true;\n  }\n\n  if (sscanf(line, \"%f,%f,%f,%d\", &parsedX, &parsedY, &parsedZ, &parsedLight) == 4) {\n    nextServoAngle = mapUnityXToServo(parsedX);\n    nextLightState = (parsedLight != 0) ? 1 : 0;",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_67Nmt2pr3SZvXLDwzlo7EkCy",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Documenting packet schema identification**",
+          "id": "49723a40-5149-494d-8da6-bab85fea9fc3",
+          "reasoningDurationMs": 65,
+          "generatedTitle": "Documenting packet schema identification"
+        },
+        {
+          "value": "Great focus point.\n\nAt [SendToArduinoScript.cs:239](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:239):\n\n```csharp\nstring command = \"CTRL,\" + servoAngle + \",\" + lightState;\n```\n\nthis builds a serial message like:\n\n- `CTRL,90,0`\n- `CTRL,135,1`\n\n### What `CTRL` does\n`CTRL` is a **command prefix / message type tag**.  \nIt tells the Arduino: “this line is a control command with `servoAngle` and `lightState` fields.”\n\nOn the Arduino side, it’s explicitly parsed with this pattern:\n\n- [UnityDataDrivenActuators.ino:42](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino:42)\n\n```cpp\nsscanf(line, \"CTRL,%d,%d\", &parsedServo, &parsedLight)\n```\n\nSo `CTRL` is not just decoration—it’s part of the expected protocol format. It helps the receiver recognize the packet shape before extracting values.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792026493615,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_3bd4af80-31f7-45b7-97d1-b27f81d8cbd4",
+      "result": {
+        "timings": {
+          "firstProgress": 3980,
+          "totalElapsed": 10001
+        },
+        "details": "GPT-5.3-Codex • 3.1 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-08e3c3a2-bf43-4e56-9e40-33b632f20bf5"
+        },
+        {
+          "suggestionId": "sgt-f9acac1d-e9e6-4c3b-b7f1-795d722d4e41"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792026503666
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792026493616,
+      "timeSpentWaiting": 0,
+      "promptTokens": 34890,
+      "completionTokens": 673,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 19
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 2
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 64
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 15
+        }
+      ],
+      "copilotCredits": 3.10107,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 103114,
+          "cachedTokens": 100864,
+          "outputTokens": 673
+        }
+      ],
+      "sessionCopilotCredits": 19.08732,
+      "elapsedMs": 10050
+    },
+    {
+      "requestId": "request_2233fa36-0d90-49a1-b9e5-69f8ed5aa721",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 112
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 113
+            },
+            "text": "Does this code send data other than control commands? I assume there are messages that are part of the handshake",
+            "kind": "text"
+          }
+        ],
+        "text": "Does this code send data other than control commands? I assume there are messages that are part of the handshake"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Searching for write calls**",
+          "id": "d8c620b1-2220-4cea-982b-ecc81e636a1b",
+          "reasoningDurationMs": 12,
+          "generatedTitle": "Searching for write calls"
+        },
+        {
+          "value": "I’ll quickly verify all serial writes in the script so I can answer precisely about handshake vs control messages.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Search for `WriteLine\\(`",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "search"
+          },
+          "toolCallId": "call_vEmFu0rRKjjrTQGgar02xWqR",
+          "toolId": "rg"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Refining mention filtering logic**",
+          "id": "ad5b9b0d-469a-46e0-a832-093d8ad9e13f",
+          "reasoningDurationMs": 14,
+          "generatedTitle": "Refining mention filtering logic"
+        },
+        {
+          "value": "Yes — good assumption. It sends **one non-control message** for handshake:\n\n- `PING` during connection setup: [SendToArduinoScript.cs:139](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:139)\n- `CTRL,...` during normal operation: [SendToArduinoScript.cs:239](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:239), sent at [SendToArduinoScript.cs:243](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:243)\n\nAnd on the receive side, Unity waits for Arduino to reply with `READY` (Unity reads this; it does not send `READY`): [SendToArduinoScript.cs:166](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:166), [SendToArduinoScript.cs:170](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:170).\n\nSo outgoing traffic is basically:\n1) `PING` (handshake ping), then  \n2) repeated `CTRL,servo,light` commands.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792026633866,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_da1828c9-df65-4159-b1f5-5f63fc9df79a",
+      "result": {
+        "timings": {
+          "firstProgress": 3610,
+          "totalElapsed": 8435
+        },
+        "details": "GPT-5.3-Codex • 7.9 credits"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792026642353
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792026633866,
+      "timeSpentWaiting": 0,
+      "promptTokens": 36702,
+      "completionTokens": 584,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 19
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 7
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 65
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 9
+        }
+      ],
+      "copilotCredits": 7.88921,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 73126,
+          "cachedTokens": 36352,
+          "outputTokens": 584
+        }
+      ],
+      "sessionCopilotCredits": 26.97653,
+      "elapsedMs": 8487
+    },
+    {
+      "requestId": "request_5adad0f7-7935-40e6-8526-0989703825f6",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 75
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 76
+            },
+            "text": "Can you produce a diagram that illustrates the logical flow of this system?",
+            "kind": "text"
+          }
+        ],
+        "text": "Can you produce a diagram that illustrates the logical flow of this system?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Inspecting Arduino handshake details**",
+          "id": "d200b48b-f78c-478d-ae06-78c8929d0c9c",
+          "reasoningDurationMs": 13,
+          "generatedTitle": "Inspecting Arduino handshake details"
+        },
+        {
+          "value": "I can—I'll quickly read the Arduino sketch around setup/loop so the diagram reflects the full Unity↔Arduino flow accurately.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino), lines 1 to 120",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino\",\n  \"view_range\": [\n    1,\n    120\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "#include <Servo.h>\n#include <stdio.h>\n\n// Unity Data Driven Actuators\n// Receives newline-terminated command from Unity: CTRL,<servoAngle>,<lightState>\n// Example: CTRL,120,1\n// Also accepts compatibility formats: <servoAngle>,<lightState> and x,y,z,light\n\nconst int SERVO_PIN = 9;\nconst int LED_PIN = 8;\nconst bool RUN_STARTUP_SELF_TEST = true;\n\nconst int SERIAL_BUFFER_SIZE = 32;\nchar serialBuffer[SERIAL_BUFFER_SIZE];\nint serialBufferIndex = 0;\n\nint servoAngle = 90;\nint lightState = 0;\n\nServo myServo;\n\nconst float UNITY_X_MIN = -10.0f;\nconst float UNITY_X_MAX = 10.0f;\n\nint mapUnityXToServo(float xValue) {\n  if (UNITY_X_MAX <= UNITY_X_MIN) {\n    return 90;\n  }\n\n  float normalized = (xValue - UNITY_X_MIN) / (UNITY_X_MAX - UNITY_X_MIN);\n  int mapped = (int)(normalized * 180.0f);\n  return constrain(mapped, 0, 180);\n}\n\nbool parseControlCommand(const char* line, int& nextServoAngle, int& nextLightState) {\n  int parsedServo = 0;\n  int parsedLight = 0;\n  float parsedX = 0.0f;\n  float parsedY = 0.0f;\n  float parsedZ = 0.0f;\n\n  if (sscanf(line, \"CTRL,%d,%d\", &parsedServo, &parsedLight) == 2) {\n    nextServoAngle = constrain(parsedServo, 0, 180);\n    nextLightState = (parsedLight != 0) ? 1 : 0;\n    return true;\n  }\n\n  if (sscanf(line, \"%d,%d\", &parsedServo, &parsedLight) == 2) {\n    nextServoAngle = constrain(parsedServo, 0, 180);\n    nextLightState = (parsedLight != 0) ? 1 : 0;\n    return true;\n  }\n\n  if (sscanf(line, \"%f,%f,%f,%d\", &parsedX, &parsedY, &parsedZ, &parsedLight) == 4) {\n    nextServoAngle = mapUnityXToServo(parsedX);\n    nextLightState = (parsedLight != 0) ? 1 : 0;\n    return true;\n  }\n\n  return false;\n}\n\nvoid handleIncomingUnityData(const char* line) {\n  if (strcmp(line, \"PING\") == 0) {\n    Serial.println(\"READY\");\n    return;\n  }\n\n  int nextServoAngle = 90;\n  int nextLightState = 0;\n\n  if (!parseControlCommand(line, nextServoAngle, nextLightState)) {\n    return;\n  }\n\n  servoAngle = nextServoAngle;\n  lightState = nextLightState;\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"OK\");\n  delay(5);\n  digitalWrite(LED_BUILTIN, LOW);\n}\n\nvoid processIncomingSerial() {\n  while (Serial.available() > 0) {\n    char incomingChar = (char)Serial.read();\n\n    if (incomingChar == '\\r') {\n      continue;\n    }\n\n    if (incomingChar == '\\n') {\n      serialBuffer[serialBufferIndex] = '\\0';\n\n      if (serialBufferIndex > 0) {\n        handleIncomingUnityData(serialBuffer);\n      }\n\n      serialBufferIndex = 0;\n    } else if (serialBufferIndex < SERIAL_BUFFER_SIZE - 1) {\n      serialBuffer[serialBufferIndex++] = incomingChar;\n    } else {\n      // If a line is too long, reset and wait for the next message.\n      serialBufferIndex = 0;\n    }\n  }\n}\n\nvoid updateActuators() {\n  myServo.write(servoAngle);\n  digitalWrite(LED_PIN, lightState ? HIGH : LOW);\n}\n\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  pinMode(LED_PIN, OUTPUT);\n  myServo.attach(SERVO_PIN);\n\n  Serial.begin(115200);\n  delay(1200);",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_VvkIbkXiG2TxiMUegTczovmR",
+          "toolId": "view",
+          "generatedTitle": "Reviewed 2 files"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino), lines 121 to 240",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino\",\n  \"view_range\": [\n    121,\n    240\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "  Serial.println(\"READY\");\n\n  if (RUN_STARTUP_SELF_TEST) {\n    digitalWrite(LED_PIN, HIGH);\n    myServo.write(0);\n    delay(1000);\n    myServo.write(180);\n    delay(1000);\n    myServo.write(90);\n    digitalWrite(LED_PIN, LOW);\n  }\n\n  myServo.write(servoAngle);\n  digitalWrite(LED_PIN, LOW);\n}\n\nvoid loop() {\n  processIncomingSerial();\n  updateActuators();\n}\n",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_vmVtXnG3h9OvgT02R9jKIODW",
+          "toolId": "view",
+          "generatedTitle": "Reviewed 2 files"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 1 to 220",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    1,\n    220\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "using System;\nusing System.IO.Ports;\nusing UnityEngine;\n\n// Beginner-friendly Unity -> Arduino sender.\n// Protocol (one newline-terminated command): CTRL,<servoAngle 0-180>,<lightState 0|1>\npublic class SendToArduinoScript : MonoBehaviour\n{\n    [Header(\"Serial Connection\")]\n    public string portName = \"COM3\";\n    public bool autoSelectPort = true;\n    public int baudRate = 115200;\n    [Min(10)] public int sendIntervalMs = 50;\n    [Min(0.25f)] public float reconnectIntervalSeconds = 2f;\n    [Min(0.25f)] public float readyTimeoutSeconds = 3f;\n    public bool requireReadyHandshake = true;\n    public bool verboseLogging = false;\n\n    [Header(\"Unity Data Sources\")]\n    public Transform dataSource;\n    public Light lightSource;\n\n    [Header(\"Map X Position To Servo Angle\")]\n    public float xMin = -10f;\n    public float xMax = 10f;\n\n    private SerialPort serialPort;\n    private float nextSendTime;\n    private float nextReconnectTime;\n    private float readyDeadline;\n    private bool hasWarnedMissingReferences;\n    private bool hasWarnedWaitingForReady;\n    private bool arduinoReady;\n\n    void Start()\n    {\n        nextSendTime = Time.time;\n        TryOpenPort();\n    }\n\n    void Update()\n    {\n        if (!IsPortOpen())\n        {\n            TryReconnectIfNeeded();\n            return;\n        }\n\n        ReadIncomingSerialMessages();\n\n        if (requireReadyHandshake && !arduinoReady)\n        {\n            if (!hasWarnedWaitingForReady)\n            {\n                Debug.LogWarning(\"Waiting for Arduino READY handshake on \" + portName + \".\");\n                hasWarnedWaitingForReady = true;\n            }\n\n            if (Time.time >= readyDeadline)\n            {\n                Debug.LogWarning(\"READY handshake timed out. Reconnecting...\");\n                nextReconnectTime = Time.time + reconnectIntervalSeconds;\n                ClosePort();\n            }\n\n            return;\n        }\n\n        float intervalSeconds = Mathf.Max(0.01f, sendIntervalMs / 1000f);\n        if (Time.time < nextSendTime)\n        {\n            return;\n        }\n\n        SendControlPacket();\n\n        // Keep cadence steady even if a frame is delayed.\n        while (nextSendTime <= Time.time)\n        {\n            nextSendTime += intervalSeconds;\n        }\n    }\n\n    void OnDisable()\n    {\n        ClosePort();\n    }\n\n    void OnApplicationQuit()\n    {\n        ClosePort();\n    }\n\n    private bool IsPortOpen()\n    {\n        return serialPort != null && serialPort.IsOpen;\n    }\n\n    private void TryReconnectIfNeeded()\n    {\n        if (Time.time < nextReconnectTime)\n        {\n            return;\n        }\n\n        TryOpenPort();\n    }\n\n    private void TryOpenPort()\n    {\n        ClosePort();\n\n        string selectedPort = ResolvePortName();\n        if (string.IsNullOrEmpty(selectedPort))\n        {\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            Debug.LogWarning(\"No serial ports detected. Reconnect will be retried.\");\n            return;\n        }\n\n        try\n        {\n            serialPort = new SerialPort(selectedPort, baudRate)\n            {\n                NewLine = \"\\n\",\n                WriteTimeout = 100,\n                ReadTimeout = 100,\n                DtrEnable = true,\n                RtsEnable = true\n            };\n\n            serialPort.Open();\n            serialPort.DiscardInBuffer();\n            serialPort.DiscardOutBuffer();\n\n            arduinoReady = false;\n            hasWarnedWaitingForReady = false;\n            readyDeadline = Time.time + readyTimeoutSeconds;\n            serialPort.WriteLine(\"PING\");\n\n            portName = selectedPort;\n            Debug.Log(\"Serial connected on \" + selectedPort + \" @ \" + baudRate + \" baud.\");\n        }\n        catch (Exception e)\n        {\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            Debug.LogWarning(\"Serial open failed: \" + e.Message);\n            Debug.LogWarning(\"Available ports: \" + string.Join(\", \", SerialPort.GetPortNames()));\n            ClosePort();\n        }\n    }\n\n    private void ReadIncomingSerialMessages()\n    {\n        if (!IsPortOpen())\n        {\n            return;\n        }\n\n        try\n        {\n            while (serialPort.BytesToRead > 0)\n            {\n                string line = serialPort.ReadLine();\n                if (string.IsNullOrWhiteSpace(line))\n                {\n                    continue;\n                }\n\n                string trimmed = line.Trim();\n                if (trimmed.Equals(\"READY\", StringComparison.OrdinalIgnoreCase))\n                {\n                    arduinoReady = true;\n                    Debug.Log(\"Arduino handshake received (READY).\");\n                }\n                else if (verboseLogging)\n                {\n                    Debug.Log(\"Arduino: \" + trimmed);\n                }\n            }\n        }\n        catch (TimeoutException)\n        {\n            // No complete line available yet.\n        }\n        catch (Exception e)\n        {\n            Debug.LogWarning(\"Serial read failed: \" + e.Message + \". Reconnecting...\");\n            arduinoReady = false;\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            ClosePort();\n        }\n    }\n\n    private string ResolvePortName()\n    {\n        if (!autoSelectPort)\n        {\n            return portName;\n        }\n\n        string[] ports = SerialPort.GetPortNames();\n        if (ports.Length == 0)\n        {\n            return string.Empty;\n        }\n\n        Array.Sort(ports, StringComparer.OrdinalIgnoreCase);\n\n        foreach (string candidate in ports)\n        {\n            string lower = candidate.ToLowerInvariant();\n            if (lower.Contains(\"usb\") || lower.Contains(\"acm\") || lower.Contains(\"modem\") || lower.Contains(\"serial\"))\n            {\n                return candidate;\n            }\n        }\n\n        return ports[0];\n    }",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_848BFvf1H1zFkLJoNUbRipGi",
+          "toolId": "view",
+          "generatedTitle": "Reviewed 2 files"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Preparing concise Mermaid diagrams**",
+          "id": "2e6ff70f-0eb0-4ed4-971e-fe06a8885686",
+          "reasoningDurationMs": 10,
+          "generatedTitle": "Preparing concise Mermaid diagrams"
+        },
+        {
+          "value": "Absolutely—here’s a diagram of the logical flow between Unity and Arduino based on [SendToArduinoScript.cs](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs) and [UnityDataDrivenActuators.ino](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino).\n\n```mermaid\nflowchart TD\n    A[Unity Start] --> B[Set nextSendTime = Time.time]\n    B --> C[TryOpenPort()]\n    C -->|Open success| D[Set arduinoReady=false<br/>readyDeadline=now+timeout<br/>Send PING]\n    C -->|Open fail / no ports| E[Set nextReconnectTime]\n    E --> F[Update loop waits until reconnect interval]\n    F --> C\n\n    D --> G[Update loop]\n    G --> H{Port open?}\n    H -->|No| F\n    H -->|Yes| I[ReadIncomingSerialMessages]\n\n    I --> J{Received READY?}\n    J -->|Yes| K[arduinoReady = true]\n    J -->|No| L[keep current state]\n\n    K --> M{Handshake required AND !arduinoReady?}\n    L --> M\n\n    M -->|Yes| N{Time.time >= readyDeadline?}\n    N -->|No| O[Wait / warn once]\n    N -->|Yes| P[ClosePort + schedule reconnect]\n    O --> G\n    P --> F\n\n    M -->|No| Q[Compute intervalSeconds = max 0.01, sendIntervalMs/1000]\n    Q --> R{Time.time < nextSendTime?}\n    R -->|Yes| G\n    R -->|No| S[SendControlPacket: CTRL,servoAngle,lightState]\n    S --> T[Advance nextSendTime by interval in while-loop]\n    T --> G\n```\n\nAnd the serial protocol message flow:\n\n```mermaid\nsequenceDiagram\n    participant U as Unity\n    participant A as Arduino\n\n    U->>A: PING\n    A-->>U: READY\n    loop Every send interval\n        U->>A: CTRL,<servoAngle>,<lightState>\\n\n        A-->>U: OK (optional to log)\n        A->>A: Apply servo + LED state\n    end\n```\n\nIf you want, I can also generate a **simplified “teaching version”** (5–6 boxes) for slides.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792082881844,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_ff0f1bb3-a202-422e-827a-b8cc7011fccc",
+      "result": {
+        "timings": {
+          "firstProgress": 3851,
+          "totalElapsed": 13337
+        },
+        "details": "GPT-5.3-Codex • 9.2 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-9f366449-ce53-4806-a5a6-2ce98ff6473b"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792082895242
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792082881845,
+      "timeSpentWaiting": 0,
+      "promptTokens": 39714,
+      "completionTokens": 1041,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 18
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 11
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 61
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 11
+        }
+      ],
+      "copilotCredits": 9.17826,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 76836,
+          "cachedTokens": 36352,
+          "outputTokens": 1041
+        }
+      ],
+      "sessionCopilotCredits": 36.15479,
+      "elapsedMs": 13397
+    },
+    {
+      "requestId": "request_8d92ae7f-72d3-401b-9814-feec6289b0c1",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 145
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 146
+            },
+            "text": "Please produce a diagram that explains the logical flow of the SendToArduino script. This should include logical paths for the conditional tests.",
+            "kind": "text"
+          }
+        ],
+        "text": "Please produce a diagram that explains the logical flow of the SendToArduino script. This should include logical paths for the conditional tests."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Preparing conditional path diagram**",
+          "id": "3779ea57-97f3-4255-8ac6-8703a0f4c1b8",
+          "reasoningDurationMs": 10,
+          "generatedTitle": "Preparing conditional path diagram"
+        },
+        {
+          "value": "Absolutely — here’s a focused logic-flow diagram for [SendToArduinoScript.cs](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), including the conditional branches.\n\n```mermaid\nflowchart TD\n    A[Start()] --> B[nextSendTime = Time.time]\n    B --> C[TryOpenPort()]\n\n    C --> D[ClosePort() first]\n    D --> E[ResolvePortName()]\n\n    E --> F{selectedPort is empty?}\n    F -->|Yes| F1[Set nextReconnectTime = now + reconnectIntervalSeconds<br/>Warn: no ports<br/>Return]\n    F -->|No| G[Attempt SerialPort open/configure]\n\n    G --> H{Open succeeded?}\n    H -->|No (Exception)| H1[Set nextReconnectTime<br/>Warn open failed<br/>ClosePort()<br/>Return]\n    H -->|Yes| I[Discard buffers<br/>arduinoReady=false<br/>hasWarnedWaitingForReady=false<br/>readyDeadline=now+readyTimeoutSeconds<br/>WriteLine('PING')]\n\n    %% Update loop\n    I --> U[Update()]\n    F1 --> U\n    H1 --> U\n\n    U --> J{IsPortOpen()?}\n    J -->|No| K[TryReconnectIfNeeded()]\n    K --> K1{Time.time < nextReconnectTime?}\n    K1 -->|Yes| UEND[Return]\n    K1 -->|No| C\n    J -->|Yes| L[ReadIncomingSerialMessages()]\n\n    %% Incoming reads\n    L --> M{Read line available?}\n    M -->|No| N[Continue Update]\n    M -->|Yes| M1{line == 'READY'?}\n    M1 -->|Yes| M2[arduinoReady = true]\n    M1 -->|No| M3{verboseLogging?}\n    M3 -->|Yes| M4[Log line]\n    M3 -->|No| N\n    M2 --> N\n    M4 --> N\n\n    %% Handshake gate\n    N --> O{requireReadyHandshake && !arduinoReady?}\n    O -->|Yes| P{hasWarnedWaitingForReady?}\n    P -->|No| P1[Warn waiting for READY<br/>hasWarnedWaitingForReady=true]\n    P -->|Yes| Q\n    P1 --> Q\n    Q{Time.time >= readyDeadline?}\n    Q -->|Yes| Q1[Warn timeout<br/>nextReconnectTime = now + reconnectIntervalSeconds<br/>ClosePort()<br/>Return]\n    Q -->|No| UEND\n    O -->|No| R[intervalSeconds = max(0.01, sendIntervalMs/1000)]\n\n    %% Send cadence gate\n    R --> S{Time.time < nextSendTime?}\n    S -->|Yes| UEND\n    S -->|No| T[SendControlPacket()]\n\n    %% Send control packet internals\n    T --> V{dataSource == null OR lightSource == null?}\n    V -->|Yes| V1{hasWarnedMissingReferences?}\n    V1 -->|No| V2[Warn missing refs<br/>hasWarnedMissingReferences=true<br/>Return]\n    V1 -->|Yes| UEND\n    V -->|No| W[hasWarnedMissingReferences=false<br/>servoAngle = MapXToServoAngle(dataSource.x)<br/>lightState = lightSource.enabled?1:0<br/>command='CTRL,servo,light']\n\n    W --> X{serial write succeeds?}\n    X -->|No (Exception)| X1[Warn write failed<br/>nextReconnectTime = now + reconnectIntervalSeconds<br/>ClosePort()]\n    X -->|Yes| Y{verboseLogging?}\n    Y -->|Yes| Y1[Log Sent command]\n    Y -->|No| Z\n\n    Y1 --> Z[while nextSendTime <= Time.time: nextSendTime += intervalSeconds]\n    X1 --> UEND\n    Z --> UEND\n\n    %% shutdown\n    AA[OnDisable / OnApplicationQuit] --> AB[ClosePort()]\n```\n\n### Quick interpretation of the major conditional paths\n\n- **Connection path**: if port isn’t open, it retries only after `nextReconnectTime`.\n- **Handshake path**: if handshake is required and `READY` hasn’t arrived, sending is blocked; timeout forces reconnect.\n- **Cadence path**: even when ready, sending only happens when `Time.time >= nextSendTime`.\n- **Safety path**: missing Unity references skip send and warn once.\n- **Recovery path**: read/write/open exceptions close the port and schedule reconnect.\n\nIf you want, I can also provide a **condensed classroom version** with just 8–10 nodes.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792087605963,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_a28939bd-2675-45f3-aff9-a05f9fd95668",
+      "result": {
+        "timings": {
+          "firstProgress": 3275,
+          "totalElapsed": 13128
+        },
+        "details": "GPT-5.3-Codex • 2.8 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-79f74b6a-ee4b-46a9-94a7-76afdf93ef46"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792087619141
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792087605963,
+      "timeSpentWaiting": 0,
+      "promptTokens": 40291,
+      "completionTokens": 1081,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 17
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 6
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 60
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 17
+        }
+      ],
+      "copilotCredits": 2.838885,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 40291,
+          "cachedTokens": 36352,
+          "outputTokens": 1081
+        }
+      ],
+      "sessionCopilotCredits": 38.993675,
+      "elapsedMs": 13178
+    },
+    {
+      "requestId": "request_d0e8801f-962b-4822-9d3b-de46ae373666",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 42
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 43
+            },
+            "text": "Please produce a mermaid diagram for this.",
+            "kind": "text"
+          }
+        ],
+        "text": "Please produce a mermaid diagram for this."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "```mermaid\nflowchart TD\n    A[Start] --> B[nextSendTime = Time.time]\n    B --> C[TryOpenPort]\n    C --> D{Port opened?}\n    D -->|No| E[Set nextReconnectTime and retry later]\n    D -->|Yes| F[Set arduinoReady=false; readyDeadline=now+timeout; send PING]\n\n    F --> G[Update loop]\n    E --> G\n\n    G --> H{Port open?}\n    H -->|No| I{Time.time >= nextReconnectTime?}\n    I -->|No| G\n    I -->|Yes| C\n    H -->|Yes| J[ReadIncomingSerialMessages]\n\n    J --> K{Received READY?}\n    K -->|Yes| L[arduinoReady=true]\n    K -->|No| M[No readiness change]\n\n    L --> N{requireReadyHandshake AND !arduinoReady?}\n    M --> N\n\n    N -->|Yes| O{Time.time >= readyDeadline?}\n    O -->|No| P[Wait for READY; skip sending this frame]\n    O -->|Yes| Q[Close port; schedule reconnect]\n    P --> G\n    Q --> G\n\n    N -->|No| R[intervalSeconds = max(0.01, sendIntervalMs/1000)]\n    R --> S{Time.time < nextSendTime?}\n    S -->|Yes| G\n    S -->|No| T[Build command: CTRL,servoAngle,lightState]\n\n    T --> U[WriteLine(command)]\n    U --> V{Write succeeded?}\n    V -->|No| W[Warn; close port; schedule reconnect]\n    V -->|Yes| X[Advance nextSendTime in while loop]\n    W --> G\n    X --> G\n```",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792087667247,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_efa66496-1bad-4dbe-be8a-d2aab9ac6a52",
+      "result": {
+        "timings": {
+          "firstProgress": 1118,
+          "totalElapsed": 4677
+        },
+        "details": "GPT-5.3-Codex • 1.6 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-b20e9dd8-c146-44c1-81c0-5a80d04b683c"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792087671977
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792087667247,
+      "timeSpentWaiting": 0,
+      "promptTokens": 41432,
+      "completionTokens": 387,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 17
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 6
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 58
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 19
+        }
+      ],
+      "copilotCredits": 1.58312,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 41432,
+          "cachedTokens": 39424,
+          "outputTokens": 387
+        }
+      ],
+      "sessionCopilotCredits": 40.576795,
+      "elapsedMs": 4730
+    },
+    {
+      "requestId": "request_54ad6a75-dbfc-477a-b1d0-0814177fc125",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 39
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 40
+            },
+            "text": "I don't see the diagram. Is it working?",
+            "kind": "text"
+          }
+        ],
+        "text": "I don't see the diagram. Is it working?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Yep—it’s likely fine, but your current chat/IDE renderer may not auto-render Mermaid blocks in-place.\n\n### Quick checks\n1. Make sure the block starts with exactly:\n   ````\n   ```mermaid\n   ````\n   and ends with:\n   ````\n   ```\n   ````\n2. Paste it into a Mermaid-capable viewer:\n   - https://mermaid.live\n   - or a Markdown preview extension that supports Mermaid\n\n### If helpful, here’s a very small test diagram\nPaste this first to confirm rendering:\n\n```mermaid\nflowchart TD\n    A[Unity Start] --> B[Send PING]\n    B --> C{READY received?}\n    C -->|No| D[Wait / timeout / reconnect]\n    C -->|Yes| E[Send CTRL,servo,light at interval]\n```\n\nIf this test renders, I can send a cleaned “final” full version optimized for your specific renderer (some require simpler labels).",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792087739314,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_464102e2-8217-4b98-a1f4-bc69af680fb4",
+      "result": {
+        "timings": {
+          "firstProgress": 1115,
+          "totalElapsed": 3962
+        },
+        "details": "GPT-5.3-Codex • 1.2 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-28b60154-8d0e-4824-9275-79f27aa48724"
+        },
+        {
+          "suggestionId": "sgt-9f2f5e09-8036-4655-93c9-d811f79e5ba0"
+        },
+        {
+          "suggestionId": "sgt-2a15a29c-25ee-4bea-9b2c-e5712b2c8451"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792087743313
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792087739314,
+      "timeSpentWaiting": 0,
+      "promptTokens": 41926,
+      "completionTokens": 202,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 17
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 6
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 57
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 20
+        }
+      ],
+      "copilotCredits": 1.24929,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 41926,
+          "cachedTokens": 40448,
+          "outputTokens": 202
+        }
+      ],
+      "sessionCopilotCredits": 41.826085,
+      "elapsedMs": 3999
+    },
+    {
+      "requestId": "request_dafd654d-f6ed-48f5-9d7a-8503d09f28c7",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 48
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 49
+            },
+            "text": "Yes that worked. Please produce the full version",
+            "kind": "text"
+          }
+        ],
+        "text": "Yes that worked. Please produce the full version"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:SendToArduinoScript.cs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 239,
+                "startColumn": 9,
+                "endLineNumber": 239,
+                "endColumn": 66,
+                "selectionStartLineNumber": 239,
+                "selectionStartColumn": 66,
+                "positionLineNumber": 239,
+                "positionColumn": 9
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Awesome—great. Here’s the full Mermaid version with simplified labels for better compatibility:\n\n```mermaid\nflowchart TD\n    A[Start] --> B[Set nextSendTime = Time.time]\n    B --> C[TryOpenPort]\n\n    C --> D[Close existing port]\n    D --> E[Resolve port name]\n    E --> F{Port name found?}\n    F -->|No| F1[Set nextReconnectTime and warn]\n    F -->|Yes| G[Create SerialPort and open]\n\n    G --> H{Open succeeded?}\n    H -->|No| H1[Set nextReconnectTime; warn; ClosePort]\n    H -->|Yes| I[Reset flags; set readyDeadline; send PING]\n\n    I --> U[Update loop]\n    F1 --> U\n    H1 --> U\n\n    U --> J{Port is open?}\n    J -->|No| K[TryReconnectIfNeeded]\n    K --> K1{Time >= nextReconnectTime?}\n    K1 -->|No| UEND[Return]\n    K1 -->|Yes| C\n\n    J -->|Yes| L[Read incoming serial]\n\n    L --> M{Line received?}\n    M -->|No| N[Continue]\n    M -->|Yes| M1{Line is READY?}\n    M1 -->|Yes| M2[Set arduinoReady = true]\n    M1 -->|No| M3[Optional verbose log]\n    M2 --> N\n    M3 --> N\n\n    N --> O{requireReadyHandshake AND NOT arduinoReady?}\n    O -->|Yes| P[Warn once: waiting for READY]\n    P --> Q{Time >= readyDeadline?}\n    Q -->|No| UEND\n    Q -->|Yes| Q1[Warn timeout; set reconnect; ClosePort]\n    Q1 --> UEND\n\n    O -->|No| R[Compute intervalSeconds]\n    R --> S{Time < nextSendTime?}\n    S -->|Yes| UEND\n    S -->|No| T[SendControlPacket]\n\n    T --> V{dataSource or lightSource missing?}\n    V -->|Yes| V1[Warn once and return]\n    V -->|No| W[Map X to servo; light to 0 or 1]\n    W --> X[Build command: CTRL,servoAngle,lightState]\n    X --> Y[WriteLine command]\n    Y --> Z{Write succeeded?}\n    Z -->|No| Z1[Warn; set reconnect; ClosePort]\n    Z -->|Yes| Z2[Advance nextSendTime in while loop]\n\n    Z1 --> UEND\n    Z2 --> UEND\n    UEND --> U\n\n    AA[OnDisable / OnApplicationQuit] --> AB[ClosePort]\n```\n\nIf you want, I can also provide this as a **sequence diagram** (Unity ↔ Arduino messages over time), which is often easier for protocol explanations.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792087864752,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_a9e8291a-10fb-41cf-90bc-0cc3fa3eaf73",
+      "result": {
+        "timings": {
+          "firstProgress": 1008,
+          "totalElapsed": 7218
+        },
+        "details": "GPT-5.3-Codex • 1.7 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-bec83360-054e-4d94-9291-5ab910371637"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792087872017
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792087864752,
+      "timeSpentWaiting": 0,
+      "promptTokens": 42234,
+      "completionTokens": 630,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 16
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 6
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 57
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 21
+        }
+      ],
+      "copilotCredits": 1.74111,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 42234,
+          "cachedTokens": 41472,
+          "outputTokens": 630
+        }
+      ],
+      "sessionCopilotCredits": 43.567195,
+      "elapsedMs": 7265
+    },
+    {
+      "requestId": "request_2d91964c-995a-462a-88ba-32f111496f7a",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 39
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 40
+            },
+            "text": "Yes, please produce a sequence diagram.",
+            "kind": "text"
+          }
+        ],
+        "text": "Yes, please produce a sequence diagram."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Creating concise sequence diagram**",
+          "id": "8c451610-def8-4bcb-9e5b-ac2ef2699958",
+          "reasoningDurationMs": 11,
+          "generatedTitle": "Creating concise sequence diagram"
+        },
+        {
+          "value": "Great idea—here’s a full Mermaid **sequence diagram** for the script behavior, including handshake, timed sending, and reconnect paths:\n\n```mermaid\nsequenceDiagram\n    autonumber\n    participant U as Unity SendToArduinoScript\n    participant S as SerialPort\n    participant A as Arduino Firmware\n\n    Note over U: Start()\n    U->>U: nextSendTime = Time.time\n    U->>U: TryOpenPort()\n    U->>S: Open(selectedPort, baudRate)\n\n    alt Open failed or no port\n        U->>U: nextReconnectTime = now + reconnectInterval\n        Note over U: Update() keeps retrying after interval\n    else Open succeeded\n        U->>U: arduinoReady = false\n        U->>U: readyDeadline = now + readyTimeout\n        U->>S: WriteLine(\"PING\")\n        S->>A: PING\n    end\n\n    loop Every Update()\n        alt Port not open\n            U->>U: TryReconnectIfNeeded()\n            alt Time >= nextReconnectTime\n                U->>U: TryOpenPort() again\n            else Too early\n                U->>U: return\n            end\n        else Port open\n            U->>S: Read incoming lines\n            alt Incoming line == READY\n                S-->>U: READY\n                U->>U: arduinoReady = true\n            else Other line\n                alt verboseLogging == true\n                    U->>U: Log incoming line\n                end\n            end\n\n            alt requireReadyHandshake && !arduinoReady\n                alt Time >= readyDeadline\n                    U->>U: Warn timeout\n                    U->>U: nextReconnectTime = now + reconnectInterval\n                    U->>S: ClosePort()\n                else Still waiting\n                    U->>U: return (do not send control packet)\n                end\n            else Handshake satisfied (or disabled)\n                U->>U: intervalSeconds = max(0.01, sendIntervalMs / 1000)\n                alt Time < nextSendTime\n                    U->>U: return (not time yet)\n                else Time >= nextSendTime\n                    alt dataSource/lightSource missing\n                        U->>U: Warn once, skip send\n                    else References valid\n                        U->>U: Build \"CTRL,servoAngle,lightState\"\n                        U->>S: WriteLine(command)\n                        S->>A: CTRL,<servoAngle>,<lightState>\n                        A-->>S: OK (optional line)\n                        S-->>U: OK (read on later updates)\n                        U->>U: while nextSendTime <= Time.time\\nnextSendTime += intervalSeconds\n                    end\n                end\n            end\n        end\n    end\n\n    Note over U: OnDisable() / OnApplicationQuit()\n    U->>S: ClosePort()\n```\n\nIf you want, I can also provide a **minimal version** (about 12–15 lines) for lecture slides.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792089128690,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_f5ab4707-b251-45eb-ad65-97ea6731b153",
+      "result": {
+        "timings": {
+          "firstProgress": 3377,
+          "totalElapsed": 9807
+        },
+        "details": "GPT-5.3-Codex • 1.9 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-319229c6-2c83-421d-adac-ac7c20ae3595"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792089138536
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792089128691,
+      "timeSpentWaiting": 0,
+      "promptTokens": 42960,
+      "completionTokens": 679,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 16
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 5
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 56
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 22
+        }
+      ],
+      "copilotCredits": 1.93676,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 42960,
+          "cachedTokens": 41472,
+          "outputTokens": 679
+        }
+      ],
+      "sessionCopilotCredits": 45.503955,
+      "elapsedMs": 9845
+    },
+    {
+      "requestId": "request_1d2b2442-0148-4aac-8bd1-c81d037a6d91",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 91
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 92
+            },
+            "text": "Please add callouts to this that indicate where in the code these logical operations occur.",
+            "kind": "text"
+          }
+        ],
+        "text": "Please add callouts to this that indicate where in the code these logical operations occur."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Planning multi-pattern line extraction**",
+          "id": "409ced6c-c536-4656-8f33-b84117ef6510",
+          "reasoningDurationMs": 18,
+          "generatedTitle": "Planning multi-pattern line extraction"
+        },
+        {
+          "value": "Perfect—I'll map each sequence step to exact line callouts from the script so you can paste a code-referenced version directly.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Search for `void Start\\(|nextSendTime = Time.time;|void Update\\(|if \\(!IsPortOpen\\(\\)\\)|T...`",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "search"
+          },
+          "toolCallId": "call_BaLsUmRomD7Zm21WhR6SvT3Z",
+          "toolId": "rg"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Planning diagram callouts and line links**",
+          "id": "069741d0-51f2-46dc-99b4-53fe853123c6",
+          "reasoningDurationMs": 12,
+          "generatedTitle": "Planning diagram callouts and line links"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 33 to 41",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    33,\n    41\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "    private bool arduinoReady;\n\n    void Start()\n    {\n        nextSendTime = Time.time;\n        TryOpenPort();\n    }\n\n    void Update()",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_6Izt2xlM7AUB1IqKNJ2pjxX2",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Reviewing connection check and timeout logic**",
+          "id": "2104dd1a-9dc6-43c8-ae89-0d0d8c66ee90",
+          "reasoningDurationMs": 17,
+          "generatedTitle": "Reviewing connection check and timeout logic"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 51 to 66",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    51,\n    66\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "        if (requireReadyHandshake && !arduinoReady)\n        {\n            if (!hasWarnedWaitingForReady)\n            {\n                Debug.LogWarning(\"Waiting for Arduino READY handshake on \" + portName + \".\");\n                hasWarnedWaitingForReady = true;\n            }\n\n            if (Time.time >= readyDeadline)\n            {\n                Debug.LogWarning(\"READY handshake timed out. Reconnecting...\");\n                nextReconnectTime = Time.time + reconnectIntervalSeconds;\n                ClosePort();\n            }\n\n            return;",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_EC4mpixyrNokCQstmcauc5VC",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Reviewing reconnect logic internals**",
+          "id": "9a5e0721-c281-47cb-affe-83b7ac96b284",
+          "reasoningDurationMs": 8,
+          "generatedTitle": "Reviewing reconnect logic internals"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 99 to 108",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    99,\n    108\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "    private void TryReconnectIfNeeded()\n    {\n        if (Time.time < nextReconnectTime)\n        {\n            return;\n        }\n\n        TryOpenPort();\n    }\n",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_pDvGQCNclBZoLFYAvhKBmieI",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Identifying READY message handling**",
+          "id": "b9cd4815-c6a9-43a0-8526-efaac15c0ff5",
+          "reasoningDurationMs": 11,
+          "generatedTitle": "Identifying READY message handling"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 166 to 178",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    166,\n    178\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "                {\n                    continue;\n                }\n\n                string trimmed = line.Trim();\n                if (trimmed.Equals(\"READY\", StringComparison.OrdinalIgnoreCase))\n                {\n                    arduinoReady = true;\n                    Debug.Log(\"Arduino handshake received (READY).\");\n                }\n                else if (verboseLogging)\n                {\n                    Debug.Log(\"Arduino: \" + trimmed);",
+                "isText": true,
+                "mimeType": "application/json"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_NRCQJEfrHI6iNr6UebVsam0c",
+          "toolId": "view"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 222 to 256",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    222,\n    256\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "    private void SendControlPacket()\n    {\n        if (dataSource == null || lightSource == null)\n        {\n            if (!hasWarnedMissingReferences)\n            {\n                Debug.LogWarning(\"Assign both dataSource and lightSource in the Inspector.\");\n                hasWarnedMissingReferences = true;\n            }\n\n            return;\n        }\n\n        hasWarnedMissingReferences = false;\n\n        int servoAngle = MapXToServoAngle(dataSource.position.x);\n        int lightState = lightSource.enabled ? 1 : 0;\n        string command = \"CTRL,\" + servoAngle + \",\" + lightState;\n\n        try\n        {\n            serialPort.WriteLine(command);\n\n            if (verboseLogging)\n            {\n                Debug.Log(\"Sent: \" + command);\n            }\n        }\n        catch (Exception e)\n        {\n            Debug.LogWarning(\"Serial write failed: \" + e.Message + \". Reconnecting...\");\n            nextReconnectTime = Time.time + reconnectIntervalSeconds;\n            ClosePort();\n        }\n    }",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_CbF7yoJ0SM5QFfDHy3Mi4Vjs",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Considering need for close port line**",
+          "id": "20427eba-2629-4b2f-a0a6-66b3217daf12",
+          "reasoningDurationMs": 11,
+          "generatedTitle": "Considering need for close port line"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Read [](file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs), lines 269 to 294",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "resultDetails": {
+            "input": "{\n  \"path\": \"/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs\",\n  \"view_range\": [\n    269,\n    294\n  ]\n}",
+            "inputLanguage": "json",
+            "output": [
+              {
+                "type": "embed",
+                "value": "    private void ClosePort()\n    {\n        arduinoReady = false;\n\n        if (serialPort == null)\n        {\n            return;\n        }\n\n        try\n        {\n            if (serialPort.IsOpen)\n            {\n                serialPort.Close();\n            }\n        }\n        catch\n        {\n            // Ignore cleanup failures during shutdown/reconnect.\n        }\n\n        serialPort.Dispose();\n        serialPort = null;\n    }\n}\n",
+                "isText": true,
+                "mimeType": "text/plain"
+              }
+            ],
+            "isError": false
+          },
+          "toolCallId": "call_1winjiH2KrHslsEndbFJmKaM",
+          "toolId": "view"
+        },
+        {
+          "kind": "thinking",
+          "value": "**Composing final annotated sequence**",
+          "id": "20a36b0e-9d96-48eb-a747-8373745cc48a",
+          "reasoningDurationMs": 22,
+          "generatedTitle": "Composing final annotated sequence"
+        },
+        {
+          "value": "Absolutely — here’s the sequence diagram with **callout IDs** embedded, followed by a legend mapping each callout to exact code lines in [SendToArduinoScript.cs](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs).\n\n```mermaid\nsequenceDiagram\n    autonumber\n    participant U as Unity SendToArduinoScript\n    participant S as SerialPort\n    participant A as Arduino Firmware\n\n    Note over U: C1 Start + initialize send timer\n    U->>U: nextSendTime = Time.time\n    U->>U: TryOpenPort()\n\n    Note over U: C2 TryOpenPort connection attempt\n    U->>S: Open(selectedPort, baudRate)\n\n    alt Open failed / no port\n        Note over U: C3 Schedule reconnect\n        U->>U: nextReconnectTime = now + reconnectInterval\n    else Open succeeded\n        Note over U: C4 Init handshake state + send PING\n        U->>U: arduinoReady = false\n        U->>U: readyDeadline = now + readyTimeout\n        U->>S: WriteLine(\"PING\")\n        S->>A: PING\n    end\n\n    loop Every Update()\n        Note over U: C5 Port-open gate\n        alt Port not open\n            U->>U: TryReconnectIfNeeded()\n            alt Time >= nextReconnectTime\n                U->>U: TryOpenPort() again\n            else Too early to reconnect\n                U->>U: return\n            end\n        else Port open\n            Note over U: C6 Read incoming lines\n            U->>S: ReadIncomingSerialMessages()\n\n            alt Incoming line is READY\n                Note over U: C7 Mark ready\n                S-->>U: READY\n                U->>U: arduinoReady = true\n            else Other incoming line\n                U->>U: optional verbose log\n            end\n\n            Note over U: C8 Handshake gate\n            alt requireReadyHandshake && !arduinoReady\n                alt Time >= readyDeadline\n                    Note over U: C9 Handshake timeout path\n                    U->>U: nextReconnectTime = now + reconnectInterval\n                    U->>S: ClosePort()\n                else Waiting for READY\n                    U->>U: return (skip sending)\n                end\n            else Handshake satisfied (or disabled)\n                Note over U: C10 Interval gate\n                U->>U: intervalSeconds = max(0.01, sendIntervalMs/1000)\n                alt Time < nextSendTime\n                    U->>U: return\n                else Time >= nextSendTime\n                    Note over U: C11 Build + send CTRL packet\n                    alt Missing dataSource/lightSource\n                        U->>U: warn once; return\n                    else Inputs valid\n                        U->>U: command = \"CTRL,servoAngle,lightState\"\n                        U->>S: WriteLine(command)\n                        S->>A: CTRL,<servoAngle>,<lightState>\n                    end\n\n                    Note over U: C12 Keep steady send cadence\n                    U->>U: while nextSendTime <= Time.time\\nnextSendTime += intervalSeconds\n                end\n            end\n        end\n    end\n\n    Note over U: C13 Shutdown cleanup\n    U->>S: ClosePort()\n```\n\n### Callout legend (code locations)\n\n- **C1**: `Start`, initialize timer, call open  \n  [Start](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:35), [nextSendTime assignment](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:37), [TryOpenPort call](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:38)\n\n- **C2**: `TryOpenPort`, open attempt  \n  [TryOpenPort](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:109), [SerialPort ctor](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:123), [Open](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:132)\n\n- **C3**: reconnect scheduling on failure/no port  \n  [No port branch](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:114), [set nextReconnectTime](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:116), [open exception catch](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:144)\n\n- **C4**: handshake initialization + ping send  \n  [arduinoReady reset](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:136), [readyDeadline set](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:138), [WriteLine(\"PING\")](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:139)\n\n- **C5**: update port-open gate + reconnect check  \n  [Update](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:41), [if !IsPortOpen](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:43), [TryReconnectIfNeeded](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:99)\n\n- **C6**: incoming serial read path  \n  [ReadIncomingSerialMessages call](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:49), [method](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:153)\n\n- **C7**: READY detection and readiness set  \n  [READY check](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:171), [arduinoReady=true](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:173)\n\n- **C8**: handshake gate condition  \n  [requireReadyHandshake && !arduinoReady](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:51)\n\n- **C9**: handshake timeout + reconnect path  \n  [timeout check](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:59), [set reconnect time](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:62), [ClosePort](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:63)\n\n- **C10**: send-interval gating  \n  [intervalSeconds calc](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:69), [nextSendTime check](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:70)\n\n- **C11**: control packet build + write  \n  [SendControlPacket](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:222), [missing refs check](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:224), [CTRL string build](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:239), [WriteLine(command)](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:243)\n\n- **C12**: cadence catch-up loop  \n  [while nextSendTime <= Time.time](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:78)\n\n- **C13**: shutdown cleanup  \n  [OnDisable](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:84), [OnApplicationQuit](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:89), [ClosePort](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Assets/Scripts/SendToArduinoScript.cs:269)\n\nIf you want, I can also generate a **compact slide version** (same callouts, fewer branches) for classroom presentation.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792089231729,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_afb28e97-24d4-451d-be81-1f50d3cc4074",
+      "result": {
+        "timings": {
+          "firstProgress": 2484,
+          "totalElapsed": 44225
+        },
+        "details": "GPT-5.3-Codex • 12.9 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-3e2f4e0f-cfb1-4790-8fc5-9b185505b534"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792089276006
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792089231729,
+      "timeSpentWaiting": 0,
+      "promptTokens": 46064,
+      "completionTokens": 3846,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 15
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 8
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 53
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 24
+        }
+      ],
+      "copilotCredits": 12.90177,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 361830,
+          "cachedTokens": 354304,
+          "outputTokens": 3846
+        }
+      ],
+      "sessionCopilotCredits": 58.405725,
+      "elapsedMs": 44277
+    },
+    {
+      "requestId": "request_0838c66c-06cb-4bc3-87b9-effee5d81988",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": "Please explain line 42 in UnityDataDrivenActuators.ino",
+            "kind": "text"
+          }
+        ],
+        "text": "Please explain line 42 in UnityDataDrivenActuators.ino"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:UnityDataDrivenActuators.ino",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 41,
+                "startColumn": 1,
+                "endLineNumber": 42,
+                "endColumn": 67,
+                "selectionStartLineNumber": 42,
+                "selectionStartColumn": 67,
+                "positionLineNumber": 41,
+                "positionColumn": 1
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Explaining specific line usage**",
+          "id": "7392a8e3-a173-4e31-825b-74e5e06281fb",
+          "reasoningDurationMs": 9,
+          "generatedTitle": "Explaining specific line usage"
+        },
+        {
+          "value": "Line 42 is this condition:\n\n```cpp\nif (sscanf(line, \"CTRL,%d,%d\", &parsedServo, &parsedLight) == 2)\n```\n\nIt means:\n\n- Try to parse the incoming text `line` using the format:\n  - literal `\"CTRL,\"`\n  - then an integer (`%d`) → store in `parsedServo`\n  - then a comma\n  - then another integer (`%d`) → store in `parsedLight`\n- `sscanf(...)` returns how many values it successfully parsed.\n- `== 2` means both integers were parsed correctly, so the command is valid.\n\nSo this accepts commands like:\n\n- `CTRL,90,0`\n- `CTRL,135,1`\n\nand rejects lines that don’t match that exact shape.\n\nReference: [UnityDataDrivenActuators.ino:42](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino:42)",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792515449942,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_057e2980-cc20-42d4-b5db-b744084cc388",
+      "result": {
+        "timings": {
+          "firstProgress": 3313,
+          "totalElapsed": 6023
+        },
+        "details": "GPT-5.3-Codex • 8.9 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-e6490d0f-5fd0-4500-96f7-23db8a3beece"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792515456013
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792515449943,
+      "timeSpentWaiting": 0,
+      "promptTokens": 48380,
+      "completionTokens": 274,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 14
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 5
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 50
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 31
+        }
+      ],
+      "copilotCredits": 8.8501,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 48380,
+          "cachedTokens": 0,
+          "outputTokens": 274
+        }
+      ],
+      "sessionCopilotCredits": 67.255825,
+      "elapsedMs": 6070
+    },
+    {
+      "requestId": "request_e3d36994-80ac-45ba-8269-71d21844f6d3",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 36
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 37
+            },
+            "text": "Tell me more about how sscanf works.",
+            "kind": "text"
+          }
+        ],
+        "text": "Tell me more about how sscanf works."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:UnityDataDrivenActuators.ino",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "external": "file:///Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "path": "/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 41,
+                "startColumn": 1,
+                "endLineNumber": 42,
+                "endColumn": 67,
+                "selectionStartLineNumber": 42,
+                "selectionStartColumn": 67,
+                "positionLineNumber": 41,
+                "positionColumn": 1
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Great question—`sscanf` is super useful in embedded C/C++.\n\n## What `sscanf` is\n\n`sscanf` = **string scan formatted**.\n\nIt reads data **from a C string** (char array) using a format pattern, similar to how `printf` writes formatted output.\n\nGeneral shape:\n\n```c\nint n = sscanf(inputString, \"format\", &out1, &out2, ...);\n```\n\n- `inputString`: text to parse\n- `\"format\"`: pattern you expect\n- `&outX`: addresses of variables where parsed values go\n- return value `n`: number of successfully assigned fields\n\n---\n\n## Your specific line\n\n```cpp\nsscanf(line, \"CTRL,%d,%d\", &parsedServo, &parsedLight)\n```\n\nMeans:\n\n- Expect literal `CTRL,`\n- Read first integer into `parsedServo`\n- Expect comma\n- Read second integer into `parsedLight`\n\nIf both integers are read, return value is `2`.\n\n---\n\n## Key behavior details\n\n### 1) Literal text in format must match exactly\n`\"CTRL,\"` has to appear in the input at that position.\n\n- `\"CTRL,120,1\"` ✅ matches\n- `\"ctrl,120,1\"` ❌ fails (case-sensitive)\n- `\"PING\"` ❌ fails\n\n---\n\n### 2) Conversion specifiers parse typed values\nCommon ones:\n\n- `%d` → `int`\n- `%f` → `float` (for `scanf` family this expects `float*` with `sscanf`? Actually `%f` in `sscanf` reads float; `%lf` for double)\n- `%c` → char\n- `%s` → word/string until whitespace\n\nIn your sketch, `%d` is used for servo and light.\n\n---\n\n### 3) Return value is critical\nAlways check it.\n\nExample:\n\n```cpp\nint a, b;\nint n = sscanf(\"12,34\", \"%d,%d\", &a, &b); // n == 2\n```\n\nIf input is `\"12,abc\"`, then `n` may be `1` (first parsed, second failed).\n\nYour `== 2` check is exactly the right defensive pattern.\n\n---\n\n### 4) Whitespace handling\nMost numeric specifiers skip leading whitespace automatically.  \nLiterals (like commas and `CTRL`) must still line up with the expected structure.\n\n---\n\n### 5) It does not enforce full-line consumption by default\nIf format matches a prefix, it can still succeed.\n\nExample:\n- Input: `\"CTRL,90,1,EXTRA\"`\n- Format: `\"CTRL,%d,%d\"`\n- This may still return `2` (it parsed the first part and ignored trailing text).\n\nIf you want strict validation, you can extend format checks (advanced pattern with `%n`), but your current approach is often fine for simple serial protocols.\n\n---\n\n## In your Unity↔Arduino protocol\n\nIt’s acting like a lightweight parser:\n- Recognize command type (`CTRL`)\n- Extract two numbers\n- Return success/failure quickly with minimal memory overhead\n\nPerfectly reasonable for Arduino serial command parsing.\n\nIf you want, I can show a small “good/bad input table” for your exact format string so you can see what passes/fails at a glance.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792515520013,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_c570c4b6-c283-4914-8ca0-2a77d4c8b912",
+      "result": {
+        "timings": {
+          "firstProgress": 2290,
+          "totalElapsed": 12392
+        },
+        "details": "GPT-5.3-Codex • 2 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-dd159f66-0a74-4f99-b351-e11babdf43b8"
+        },
+        {
+          "suggestionId": "sgt-5406e3c1-d513-4f86-b353-6b5f1166d6e7"
+        },
+        {
+          "suggestionId": "sgt-81850b86-3908-4818-afa8-9ec25e56ca2b"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792515532445
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792515520013,
+      "timeSpentWaiting": 0,
+      "promptTokens": 48742,
+      "completionTokens": 690,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 14
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 5
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 50
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 31
+        }
+      ],
+      "copilotCredits": 1.99633,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 48742,
+          "cachedTokens": 47616,
+          "outputTokens": 690
+        }
+      ],
+      "sessionCopilotCredits": 69.252155,
+      "elapsedMs": 12432
+    },
+    {
+      "requestId": "request_304a6bdd-3818-4eee-9dc3-984f9e358d51",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 170
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 171
+            },
+            "text": "I see two functions that seem similar: \"handleIncomingUnityData\" and \"processIncomingSerial\". I see that one calls the other. At a high level, how do these work together?",
+            "kind": "text"
+          }
+        ],
+        "text": "I see two functions that seem similar: \"handleIncomingUnityData\" and \"processIncomingSerial\". I see that one calls the other. At a high level, how do these work together?"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "thinking",
+          "value": "**Summarizing conceptual pipeline**",
+          "id": "869a8a37-4784-4b38-af29-07c64dfa8459",
+          "reasoningDurationMs": 11,
+          "generatedTitle": "Summarizing conceptual pipeline"
+        },
+        {
+          "value": "Great observation—they’re two layers of the same pipeline:\n\n- **`processIncomingSerial`** = **transport/framing layer**  \n  (reads raw serial bytes and assembles complete lines)\n- **`handleIncomingUnityData`** = **message/business-logic layer**  \n  (interprets one complete line and updates state)\n\nIn [UnityDataDrivenActuators.ino](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino), the flow is:\n\n1. `loop()` calls [processIncomingSerial](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino:84).\n2. `processIncomingSerial`:\n   - reads bytes from `Serial`\n   - ignores `\\r`\n   - collects chars into a buffer\n   - when it sees `\\n`, it treats that as “one full message”\n   - then calls [handleIncomingUnityData](/Users/blahey/ASU/Teaching/DigitalPhysicalSystems/Courses/Fall2026/Projects/UnityArduinoTesting/VirtualToPhysical01-main/Firmware/UnityDataDrivenActuators/UnityDataDrivenActuators.ino:60) with that line\n3. `handleIncomingUnityData`:\n   - if line is `\"PING\"` → replies `\"READY\"` (handshake)\n   - otherwise tries to parse control data (via `parseControlCommand`)\n   - if valid, updates `servoAngle` and `lightState`\n4. Then `loop()` calls `updateActuators()` to apply latest state to hardware.\n\nSo: **one function gets complete messages safely; the other decides what those messages mean.** This separation keeps serial parsing robust and command logic clean.",
+          "isTrusted": false,
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "agent": {
+        "id": "agent-host-copilotcli",
+        "name": "agent-host-copilotcli",
+        "fullName": "Copilot",
+        "description": "Copilot SDK agent running in the local agent host process",
+        "extensionId": {
+          "value": "vscode.agent-host",
+          "_lower": "vscode.agent-host"
+        },
+        "extensionPublisherId": "vscode",
+        "extensionDisplayName": "Agent Host",
+        "isDefault": false,
+        "isDynamic": true,
+        "isCore": true,
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          }
+        },
+        "slashCommands": [],
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1792516431154,
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_5f557e45-6cbf-486c-a77a-8146ec766833",
+      "result": {
+        "timings": {
+          "firstProgress": 3175,
+          "totalElapsed": 8372
+        },
+        "details": "GPT-5.3-Codex • 1.7 credits"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1792516439566
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1792516431155,
+      "timeSpentWaiting": 0,
+      "promptTokens": 49567,
+      "completionTokens": 477,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System prompt",
+          "percentageOfPrompt": 14
+        },
+        {
+          "category": "User Context",
+          "label": "Tool Results",
+          "percentageOfPrompt": 5
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 49
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 32
+        }
+      ],
+      "copilotCredits": 1.681225,
+      "modelTotals": [
+        {
+          "model": "GPT-5.3-Codex",
+          "inputTokens": 49567,
+          "cachedTokens": 48640,
+          "outputTokens": 477
+        }
+      ],
+      "sessionCopilotCredits": 70.93338,
+      "elapsedMs": 8411
+    }
+  ]
+}

@@ -576,7 +576,7 @@ MonoBehaviour:
   portName: /dev/cu.usbmodem21201
   autoSelectPort: 1
   baudRate: 115200
-  sendIntervalMs: 50
+  sendIntervalMs: 10
   reconnectIntervalSeconds: 2
   readyTimeoutSeconds: 3
   requireReadyHandshake: 1
